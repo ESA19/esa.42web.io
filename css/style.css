@@ -353,6 +353,7 @@
 /*==================== MEMLEKET ====================*/
 .memleket__container
 {
+  overflow: initial;
   row-gap: 0;
 }
 .memleket__header
@@ -361,8 +362,14 @@
   margin-bottom: var(--mb-2-5); 
   cursor: pointer;
 }
+.memleket__content
+{
+  padding:  0 1.5rem;
+}
 .memleket__img
 {
+  margin-left: 100px;
+  margin-bottom: 20px;
   width: 500px;
   border-radius: .5rem;
   justify-self: center;
@@ -403,6 +410,19 @@
 }
 
 /*==================== Miraslarımız ====================*/
+.miraslarımız__container
+{
+  overflow: initial;
+}
+.miraslarımız__content
+{
+  padding:  0 1.5rem;
+}
+.accordion
+{
+  margin-bottom: 30px;
+  
+}
 
 
 /*==================== SERVICES ====================*/
