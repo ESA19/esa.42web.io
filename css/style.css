@@ -358,6 +358,7 @@ body.dark-theme
   padding: 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
+  border: 0;
 }
 .button:hover
 {
