@@ -359,6 +359,7 @@ body.dark-theme
   border-radius: .5rem;
   font-weight: var(--font-medium);
   border: 0;
+  margin-bottom: 10px;
 }
 .button:hover
 {
@@ -566,8 +567,8 @@ body.dark-theme
   margin-top: var(--mb-3);
 }
 
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
+/*==================== Farklı Cihazlar İçin Site Boyutu Ayarlanması ====================*/
+/* Küçük Aygıtlar İçin */
 @media screen and (max-width:350px)
 {
   .container
@@ -618,7 +619,7 @@ body.dark-theme
 
 }
 
-/* For medium devices */
+/* Orta Aygıtlar İçin */
 @media screen and (min-width:568px)
 {
  .home__content
@@ -758,6 +759,7 @@ body.dark-theme
 }
 
  }
+ /*Büyük Aygıtlar İçin*/
 @media  screen and (min-width:1024px)
  {
    .header,

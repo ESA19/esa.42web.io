@@ -211,24 +211,28 @@
                             </div>
                         </div>
                     </div>
-                    <form  class="iletişim__form grid" onsubmit="sendEmail(); reset(); return false;">
+                    <form  class="iletişim__form grid" action="https://formspree.io/f/mqknwdjd" method="POST">
                         <div class="iletişim__inputs grid">
                             <div class="iletişim__content">
                                 <label for="" class="iletişim__label">İsim</label>
-                                <input type="text" class="iletişim__input" required>
+                                <input type="text" class="iletişim__input" name="isim" required>
                             </div>
                             <div class="iletişim__content">
                                 <label for="" class="iletişim__label">Email</label>
-                                <input type="email" class="iletişim__input" id="email" required>
+                                <input type="email" class="iletişim__input" id="email"  name="email" required>
                             </div>
                             <div class="iletişim__content">
                                 <label for="" class="iletişim__label">Mesaj</label>
-                                <textarea name="" id="" cols="0" rows="7" class="iletişim__input" required></textarea>
+                                <textarea name="message" id="" cols="0" rows="7" class="iletişim__input"  required></textarea>
                             </div>
                             <div>
                                 <button type="submit" class="button">Mesaj Gönder
                                     <i class="uil uil-message button__icon"></i>
                                 </button>
+                                <button type="reset" class="button">Temizle
+                                    <i class="uil uil-cancel button__icon"></i>
+                                </button>
+
                             </div>
                         </div>
                     </form>
@@ -264,25 +268,7 @@
             <p class="footer__copy">&#169; SUESA All Right Reserved</p>
         </div>
     </footer>
-    <script>
-        function sendEmail()
-        {
-            Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "deneme_site@protonmail.com",
-            Password : "BDA39C3605FD97E3FD93B5140CEBFF5868D9",
-            To : 'aahmet.keskin@yandex.com',
-            From : document.getElementById("email").value,
-            Subject : "This is the subject",
-            Body : "And this is the body"
-        }).then(
-        message => alert(message)
-        );
-        }
-    </script>
-   
     <script src="Js/Main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
