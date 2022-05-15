@@ -1,11 +1,11 @@
 /*==================== GOOGLE FONTS ====================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-/*==================== VARIABLES CSS ====================*/
+/*====================  CSS Değişkenleri ====================*/
 :root {
     --header-height: 3rem;
 
-    /*========== Colors ==========*/
+    /*========== Renkler ==========*/
     
     --hue-color: 211; 
     --first-color: hsl(var(--hue-color), 21%, 50%);
@@ -19,7 +19,7 @@
     --body-color: hsl(188, 35%, 92%);
     --container-color: #fff;
 
-/*========== Font and typography ==========*/
+/*========== Font ==========*/
 --body-font: 'Poppins', sans-serif;
 --big-font-size: 2rem;
 --h1-font-size: 1.5rem;
@@ -31,8 +31,7 @@
  /*========== Font weight ==========*/
  --font-medium: 500;
  --font-semi-bold: 600;
- /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+ /*========== Margin Bottom ==========*/
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
@@ -46,7 +45,7 @@
     --z-fixed: 100;
     --z-modal: 1000;
 }
-/* Font size for large devices */
+/* Büyük Cihazlar İçin Font Büyüklüğü */
 @media screen and (min-width: 968px) {
     :root {
         --big-font-size: 3rem;
@@ -86,7 +85,7 @@ body.dark-theme
   color:hsl(0, 85%, 64%)
 }
 
-/*==================== BASE ====================*/
+/*==================== Temel Etiketlerin Özellikleri====================*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -122,7 +121,7 @@ body.dark-theme
     max-width: 100%;
     height: auto;
   }
-  /*==================== REUSABLE CSS CLASSES ====================*/
+  /*==================== Ortak Sınıfların Css Kodları ====================*/
 .section {
     padding: 2rem 0 4rem;
   }
@@ -142,7 +141,7 @@ body.dark-theme
   .section__subtitle {
     text-align: center;
   }
-  /*==================== LAYOUT ====================*/
+  /*==================== Düzen ====================*/
 .container {
     max-width: 768px;
     margin-left: var(--mb-1-5);
@@ -163,7 +162,7 @@ body.dark-theme
     background-color: var(--body-color);
   }
 
-/*==================== NAV ====================*/
+/*==================== Menü ====================*/
 .nav
 {
     max-width: 968px;
@@ -264,7 +263,7 @@ body.dark-theme
 }
 
 
-/*==================== HOME ====================*/
+/*==================== Home ====================*/
 .home__container
 {
   gap: 1rem;
@@ -293,7 +292,6 @@ body.dark-theme
 }
 .home__img
 {
-  margin-left: 50px;
   width: 250px;
 
 }
@@ -349,7 +347,7 @@ body.dark-theme
 }
 
 
-/*==================== BUTTONS ====================*/
+/*==================== Butonlar ====================*/
 .button
 {
   display: inline-block;
@@ -378,12 +376,68 @@ body.dark-theme
   align-items: center;
 }
 
-/*==================== ABOUT ====================*/
+/*==================== About ====================*/
+.about__data
+{
+  text-align: center;
+}
 .about__description
 {
-  text-align:center;
   margin-bottom: var(--mb-2-5);
 
+}
+/*==================== Eğitim Ve Sertifikalar====================*/
+.qualification__tabs
+{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: var(--mb-2);
+}
+.qualification__button
+{
+  color: hsl(211, 61%, 62%);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+.qualification__button:hover
+{
+  color:hsl(0, 92%, 70%)
+}
+.qualification__icon
+{
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+.qualification__data
+{
+  text-align: center;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+.qualification__title
+{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+.qualification__subtitle
+{
+  display: inline-block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+.qualification__calendar
+{
+  font-size: var(--small-font-size);
+
+}
+.qualification [data-content]
+{
+  display: none;
+}
+.qualification__active[data-content]
+{
+  display: block;
 }
 
 /*==================== MEMLEKET ====================*/
@@ -462,10 +516,6 @@ body.dark-theme
   margin-bottom: 30px;
   
 }
-
-
-
-
 /*==================== İletişim ====================*/
 .iletişim__container
 {
@@ -520,9 +570,7 @@ body.dark-theme
   outline: none;
   padding: .25rem .5rem .5rem 0;
 }
-
-
-/*==================== FOOTER ====================*/
+/*==================== Footer====================*/
 .footer
 {
   padding-top: 2rem;
@@ -585,6 +633,10 @@ body.dark-theme
   {
     column-gap: 0;
   }
+  .home__description
+  {
+    text-align: center;
+  }
   .home__content
   {
     grid-template-columns: .25fr 3fr;
@@ -616,6 +668,10 @@ body.dark-theme
     flex-direction: column;
     align-items: center;
   }
+  .about__container
+  {
+    margin-left: 10px;
+  }
 
 }
 
@@ -639,7 +695,14 @@ body.dark-theme
  {
    grid-template-columns: repat(2,1fr);
  }
- 
+ .about__container
+ {
+   margin-left: 10px;
+ }
+ .about__description
+ {
+   margin-left: 20px;
+ }
 }
  @media screen and (min-width:768px) 
  {
@@ -719,7 +782,8 @@ body.dark-theme
   }
   .about__description
   {
-    text-align: initial;
+    margin-left: 10px;
+    text-align: center;
   }
  .memleket__content
  {

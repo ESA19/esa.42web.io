@@ -53,13 +53,38 @@ function scrollActive(){
     })
 }
 window.addEventListener('scroll', scrollActive)
-/*==================== Sitede Gezerken Menünün vurgulanması ==============*/
+/*==================== Sitede Gezerken Menünün Gölgesi==============*/
 function scrollHeader(){
     const nav = document.getElementById('header')
   
     if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
+/*==================== Eğitim Ve Sertifika Butonları ==============*/
+const tabs=document.querySelectorAll('[data-target'),
+        tabContents=document.querySelectorAll('[data-content')
+
+ tabs.forEach(tab=>
+ {
+     tab.addEventListener('click',()=>
+     {
+         const target=document.querySelector(tab.dataset.target)
+
+         tabContents.forEach(tabContent=>
+            {
+                tabContent.classList.remove('qualification__active')
+            })
+            target.classList.add('qualification__active')
+            tab.forEach(tab=>
+                {
+                    tab.classList.remove('qualification__active')
+                })
+            tab.classList.add('qualification__active')
+
+
+     })
+ })
+
 /*==================== Koyu Tema ==============*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
