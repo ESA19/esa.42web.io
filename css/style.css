@@ -386,6 +386,23 @@ body.dark-theme
   margin-bottom: var(--mb-2-5);
 
 }
+.about__images
+{
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.about__image
+{
+  border-radius: 10px;
+  width:fit-content;
+  object-fit: fill;
+}
+
 /*==================== Eğitim Ve Sertifikalar====================*/
 .qualification__tabs
 {
@@ -641,6 +658,10 @@ body.dark-theme
   {
     grid-template-columns: .25fr 3fr;
   }
+  .about__images
+  {
+    grid-template-columns: repat(2,1fr)
+  }
   .home__esa-img
   {
     width: 180px;
@@ -690,7 +711,11 @@ body.dark-theme
  {
    order: 1;
    justify-self: center;
- } 
+ }
+ .about__images
+  {
+    grid-template-columns: repat(2,1fr)
+  } 
  .about__container,.memleket__container,.miraslarımız__content,.iletişim__container,.footer__container
  {
    grid-template-columns: repat(2,1fr);
